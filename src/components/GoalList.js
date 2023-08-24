@@ -1,11 +1,15 @@
 import React from 'react'
 
-export const GoalList = () => {
+export const GoalList = props => {
+
     return (
-        <ul className='goal-list'>
-            <li>Finish the Course</li>
-            <li>How do you know? HOW DO YOU KNOW!?</li>
-            <li>There shall be ragnarok </li>
+        <ul className='goal-list'>{
+            props.goals.map(
+                (goal)=> {
+                    return <li key={goal.id}>{goal.text}</li>
+            })
+        }
+        
         </ul>
     )
 }

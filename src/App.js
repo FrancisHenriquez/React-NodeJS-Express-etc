@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import {GoalList }from  './components/GoalList'
-
+import {GoalList }from  './components/GoalList/GoalList'
+import { NewGoal } from './components/NewGoal/NewGoal';
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
     <div>
     
     <h2 className='course-goals h2'>Course Goal</h2>
+    <NewGoal />
    <GoalList goals = {courseGoals}/>
     
     </div>

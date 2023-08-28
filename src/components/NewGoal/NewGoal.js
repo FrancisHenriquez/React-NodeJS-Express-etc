@@ -1,7 +1,7 @@
 import React from 'react'
 import  './NewGoal.css'
 
-export const NewGoal = () => {
+export const NewGoal = props => {
     const addGoalHandler = event => {
         event.preventDefault();
 
@@ -9,7 +9,7 @@ export const NewGoal = () => {
             id: Math.random().toString(),
             text:"Jumpshot 23"
         }
-        console.log(newGoal)
+        props.onAddGoal(NewGoal);
 
     }
   return (
